@@ -58,7 +58,7 @@ var responses = [
 
 function getForecast() {
   // pass that location to api
-  var url = 'https://api.forecast.io/forecast/KEY/'+ latitude + ',' + longitude + ',' + cDay;
+  var url = 'https://api.forecast.io/forecast/f51e840a723713cc92f88b23560a26eb/'+ latitude + ',' + longitude + ',' + cDay;
   $.getJSON(url, function(data) {
     console.log(data);
   });
