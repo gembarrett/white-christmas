@@ -22,6 +22,6 @@ $key = file_get_contents($path);
 </head>
 <body>
   <div id="demo"></div>
-  <!-- <script type="text/javascript" src="logic.js"></script> -->
+  <script type="text/javascript" src="logic.js"></script>
 </body>
 </html>

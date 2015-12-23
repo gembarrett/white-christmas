@@ -13,11 +13,8 @@ var bDay = 1451088000;
 if ("geolocation" in navigator) {
     getLocationToSearch();
 } else {
-}
 
-$('form#getLocation').submit(function(){
-    console.log('submit');
-});
+}
 
 // get location to search
 function getLocationToSearch() {
@@ -58,7 +55,7 @@ var responses = [
 
 function getForecast() {
   // pass that location to api
-  var url = 'https://api.forecast.io/forecast/f51e840a723713cc92f88b23560a26eb/'+ latitude + ',' + longitude + ',' + cDay;
+  var url = 'https://api.forecast.io/forecast/KEY/'+ latitude + ',' + longitude + ',' + cDay;
   $.getJSON(url, function(data) {
     console.log(data);
   });
