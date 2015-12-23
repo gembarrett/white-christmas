@@ -1,21 +1,23 @@
 // PROCESS
 
-var $requestButton = document.getElementById("requestLocation");
 var latitude;
 var longitude;
 var cEve = 1450915200;
 var cDay = 1451001600;
 var bDay = 1451088000;
 
+// browser checks
+
+
 // check geolocation is available
 if ("geolocation" in navigator) {
-  $requestButton.addEventListener("click", function(e) {
-    console.log("clicked");
     getLocationToSearch();
-  });
 } else {
-  $requestButton.remove();
 }
+
+$('form#getLocation').submit(function(){
+    console.log('submit');
+});
 
 // get location to search
 function getLocationToSearch() {
@@ -30,6 +32,7 @@ function getLocationToSearch() {
     var crd = pos.coords;
     longitude = crd.longitude;
     latitude = crd.latitude;
+    getForecast();
   };
 
   function error(err) {
@@ -53,6 +56,11 @@ var responses = [
   "Yes."
 ];
 
-console.log(responses[0]);
-
+function getForecast() {
+  // pass that location to api
+  var url = 'https://api.forecast.io/forecast/KEY/'+ latitude + ',' + longitude + ',' + cDay;
+  $.getJSON(url, function(data) {
+    console.log(data);
+  });
+}
 
