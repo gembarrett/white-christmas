@@ -34,12 +34,13 @@
 
       return false;
   }
-  echo in_array_r("snow", $json) ? '<div id="yes"><img src="GC-yes.jpg"></div>' : '<div id="no"><img src="GC-no.jpg"></div>';
+
 ?>
 <html>
 <head>
     <link href="main.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 <body>
+  <?php echo in_array_r("snow", $json) ? '<div id="yes"><img src="GC-yes.jpg"></div>' : '<div id="no"><img src="GC-no.jpg"></div>'; ?>
 </body>
 </html>
