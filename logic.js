@@ -8,6 +8,10 @@ if ("geolocation" in navigator) {
   alert('Get a better browser!');
 }
 
+// allow location search to be user-triggered
+var el = document.getElementById("shareloc");
+el.addEventListener("click", getLocationToSearch, false);
+
 // get location to search
 function getLocationToSearch() {
   var options = {

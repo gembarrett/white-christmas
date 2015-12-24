@@ -38,6 +38,10 @@ p {
   padding:0 1.5em;
 }
 
+#shareloc {
+  cursor: pointer;
+}
+
 #first {
   background-color: black;
   color:white;
