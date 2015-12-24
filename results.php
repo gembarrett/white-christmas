@@ -18,8 +18,8 @@
   $key = file_get_contents($path);
 
   // test variables with alaska
-  // $lat = "61.2180556";
-  // $long = "-149.9002778";
+  $lat = "61.2180556";
+  $long = "-149.9002778";
 
   $url = "https://api.forecast.io/forecast/".$key."/".$lat.",".$long.",".$cDay;
   $contents = file_get_contents($url);
@@ -34,5 +34,12 @@
 
       return false;
   }
-  echo in_array_r("snow", $json) ? '<img src="GC-yes.jpg">' : '<img src="GC-no.jpg">';
+  echo in_array_r("snow", $json) ? '<div id="yes"><img src="GC-yes.jpg"></div>' : '<div id="no"><img src="GC-no.jpg"></div>';
 ?>
+<html>
+<head>
+    <link href="main.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+</body>
+</html>
