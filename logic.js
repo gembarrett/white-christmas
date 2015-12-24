@@ -29,7 +29,7 @@ function getLocationToSearch() {
 
 function passToPhp(lat, long) {
   // test variables with alaska
-  lat = "61.2180556";
-  long = "-149.9002778";
+  // lat = "61.2180556";
+  // long = "-149.9002778";
   window.location.href="results.php?long="+long+"&lat="+lat;
 }

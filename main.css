@@ -1,5 +1,6 @@
 body {
   margin:0;
+  font-family: "Helvetica", sans-serif;
 }
 #no, #yes {
   width:100%;
@@ -7,10 +8,45 @@ body {
 }
 #no {
   background-color:black;
+  background: url(GC-no.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #yes {
   background-color: white;
+  background: url(GC-yes.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 img {
   width:100%;
+}
+
+h1 {
+  margin:0;
+  font-size:22vh;
+  padding:0.15em;
+  font-family: "Impact", sans-serif;
+}
+
+p {
+  font-family: "Helvetica", sans-serif;
+  padding:0 1.5em;
+}
+
+#first {
+  background-color: black;
+  color:white;
+  width:100%;
+  height:100%;
+}
+#buttons {
+  position:absolute;
+  z-index: 1;
+  bottom:0;
+  right:0;
 }
